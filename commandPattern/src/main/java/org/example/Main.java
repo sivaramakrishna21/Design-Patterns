@@ -6,8 +6,9 @@ public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        GitCLI gitCLI=new GitCLI();
         Repository repository=new Repository();
+        GitCLI gitCLI=new GitCLI(repository);
+
         GitCommand command1=new AddFileCommand(repository,"test");
         GitCommand command2=new CommitCommand(repository,"te3st");
         gitCLI.executeCommand(command1);
